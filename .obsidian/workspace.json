@@ -75,6 +75,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "76bd7c9c8ecfdb25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a12b8dca14a9a51b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -128,7 +144,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -166,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 256.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,10 +197,10 @@
   },
   "active": "42f9c0e030b84256",
   "lastOpenFiles": [
-    "OSCP/Proving Ground",
     "README.md",
     "OSCP/Proving Ground/Craft2.md",
     "Untitled.md",
+    "OSCP/Proving Ground",
     "OSCP"
   ]
 }
