@@ -33,6 +33,7 @@
       {
         "id": "7996419fc0b570f1",
         "type": "tabs",
+        "dimension": 65.4308617234469,
         "children": [
           {
             "id": "e546c85d26c8bc32",
@@ -79,6 +80,7 @@
       {
         "id": "76bd7c9c8ecfdb25",
         "type": "tabs",
+        "dimension": 34.569138276553105,
         "children": [
           {
             "id": "a12b8dca14a9a51b",
@@ -176,13 +178,28 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "d4e56543f2d8a8bd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 256.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,7 +209,8 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "workspaces:Manage workspace layouts": false
     }
   },
   "active": "42f9c0e030b84256",
