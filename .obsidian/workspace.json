@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BEBE FACE.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BEBE FACE"
+              "title": "README"
             }
           }
         ]
@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BEBE FACE.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of BEBE FACE"
+              "title": "Outline of README"
             }
           },
           {
@@ -215,9 +215,9 @@
   },
   "active": "42f9c0e030b84256",
   "lastOpenFiles": [
+    "BEBE FACE.md",
     "README.md",
     "OSCP/Proving Ground/Craft2.md",
-    "BEBE FACE.md",
     "OSCP/Proving Ground",
     "OSCP"
   ]
