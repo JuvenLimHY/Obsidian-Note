@@ -9,3 +9,4 @@ red bottle for hair oil
 balance cream
 panda eye
 lotion
+friiming cream
