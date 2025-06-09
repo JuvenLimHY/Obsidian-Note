@@ -121,7 +121,21 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 
 whoanmi /priv
 
+```
+*Evil-WinRM* PS C:\windows> whoami /priv
 
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                          State
+============================= ==================================== =======
+SeShutdownPrivilege           Shut down the system                 Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled
+SeUndockPrivilege             Remove computer from docking station Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Enabled
+SeTimeZonePrivilege           Change the time zone                 Enabled
+
+```
 
 whoami /all
 
@@ -182,6 +196,19 @@ USER INFORMATION
 User Name      SID
 ============== ==============================================
 oscp\r.andrews S-1-5-21-2468442526-2906141135-4054829294-1105
+
+```
+
+
+hostname
+```
+*Evil-WinRM* PS C:\windows> systeminfo
+systeminfo.exe : ERROR: Access denied
+    + CategoryInfo          : NotSpecified: (ERROR: Access denied:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+*Evil-WinRM* PS C:\windows> hostname
+WS26
+*Evil-WinRM* PS C:\windows> 
 
 ```
 
