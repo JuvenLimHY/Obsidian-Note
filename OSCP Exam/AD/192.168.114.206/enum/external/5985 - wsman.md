@@ -40,6 +40,8 @@ oscp\r.andrews S-1-5-21-2468442526-2906141135-4054829294-1105
 
 ```
 
-get file online
+get file from vm
 
-scp 192.168.49.114@192.168.114.206 :C:\Temp\*.zip /path/to/your/dir
+![[{FB3A9F44-C6B9-48A8-A07B-9CE5747D6B48}.png]]
+
+can do anything as user got no permission, script is disabled for this system, maybe winpeas might work=
