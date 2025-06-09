@@ -20,3 +20,57 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Mon Jun  9 10:31:47 2025 -- 1 IP address (1 host up) scanned in 34.90 seconds
 
 ```
+
+
+login via 
+anonymous 
+
+![[{721BF4BC-5C3A-4FD2-8109-6F4C733EE070} 1.png]]
+
+```
+┌──(kali㉿kali)-[~/OSCP/Exam/AD/192.168.114.111]
+└─$ ftp 192.168.114.111
+Connected to 192.168.114.111.
+220 Microsoft FTP Service
+Name (192.168.114.111:kali): anonymous
+331 Anonymous access allowed, send identity (e-mail name) as password.
+Password: 
+230 User logged in.
+Remote system type is Windows_NT.
+ftp> ls
+229 Entering Extended Passive Mode (|||50944|)
+exit
+^C
+receive aborted. Waiting for remote to finish abort.
+ftp> passive
+Passive mode: off; fallback to active mode: off.
+ftp> ls
+200 EPRT command successful.
+150 Opening ASCII mode data connection.
+425 Cannot open data connection.
+ftp> ls -alr
+200 EPRT command successful.
+125 Data connection already open; Transfer starting.
+12-07-19  02:12AM                  278 desktop.ini
+08-29-22  04:06PM       <DIR>          My Music
+08-29-22  04:06PM       <DIR>          My Pictures
+08-29-22  04:06PM       <DIR>          My Videos
+08-31-22  03:14PM       <DIR>          SanDisk
+226 Transfer complete.
+ftp> cd SanDisk
+250 CWD command successful.
+ftp> ls alr
+200 EPRT command successful.
+550 The system cannot find the file specified. 
+ftp> ls -alr
+200 EPRT command successful.
+125 Data connection already open; Transfer starting.
+08-31-22  03:01PM                    4 ._DS_Store
+08-31-22  03:12PM               705638 BackUp.zip
+08-31-22  03:09PM                90587 Inventory.xls
+08-31-22  03:09PM                62822 LeaveApplicationForm.pdf
+08-31-22  02:56PM                22084 MyKeychain.keychain-db
+08-31-22  03:10PM                75587 Salaries.xlsx
+
+```
+
