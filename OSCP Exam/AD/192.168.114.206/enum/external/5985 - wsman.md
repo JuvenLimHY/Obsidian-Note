@@ -356,3 +356,12 @@ C:.
 ¦   write.exe
 
 ```
+
+finding alwatsinstallelevayed 
+
+```
+*Evil-WinRM* PS C:\Users\r.andrews\Documents> reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer 
+reg.exe : ERROR: The system was unable to find the specified registry key or value.
+    + CategoryInfo          : NotSpecified: (ERROR: The syst...y key or value.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+```
