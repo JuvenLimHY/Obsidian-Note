@@ -1,6 +1,8 @@
 # Credentials
 
 ```
+username: svc_sql
+password: SQLPowerHouse333
 
 ```
 
