@@ -1,8 +1,13 @@
 # Host information
 
 ```
+         * Username : a.betty
+         * Domain   : OSCP.EXAM
+         * Password : BrightSunnyDay666
 
 ```
+
+evil-winrm -u 'a.betty' -p 'BrightSunnyDay666' -i  172.16.114.200
 
 # Scans
 ## nmap 

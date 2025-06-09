@@ -321,3 +321,8 @@ mimikatz(commandline) # exit
 Bye!
 
 ```
+
+         * Username : a.betty
+         * Domain   : OSCP.EXAM
+         * Password : BrightSunnyDay666
+     * 
