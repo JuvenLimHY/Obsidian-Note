@@ -162,6 +162,36 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
+
+# http://192.168.114.110/.env
+```
+
+APP_NAME=Local
+APP_ENV=local
+APP_KEY=base64:yN/2x7bTc/KG/T0BZvL8s1W4N4+Y87PXRvJm8iPWzE=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=creds
+DB_USERNAME=root
+DB_PASSWORD=Strong.DB?Password
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME=""
+```
 # screenshot
 
 

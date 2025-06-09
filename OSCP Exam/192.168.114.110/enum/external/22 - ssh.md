@@ -69,3 +69,39 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```
 
 ```
+
+
+pkexec ???
+
+
+```
+$ find / -perm -4000 -type f 2>/dev/null
+/usr/lib/snapd/snap-confine
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/libexec/polkit-agent-helper-1
+/usr/bin/umount
+/usr/bin/pkexec
+/usr/bin/mount
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/fusermount3
+/usr/bin/sudo
+/usr/bin/newgrp
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/su
+/snap/core20/1405/usr/bin/chfn
+/snap/core20/1405/usr/bin/chsh
+/snap/core20/1405/usr/bin/gpasswd
+/snap/core20/1405/usr/bin/mount
+/snap/core20/1405/usr/bin/newgrp
+/snap/core20/1405/usr/bin/passwd
+/snap/core20/1405/usr/bin/su
+/snap/core20/1405/usr/bin/sudo
+/snap/core20/1405/usr/bin/umount
+/snap/core20/1405/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core20/1405/usr/lib/openssh/ssh-keysign
+/snap/snapd/15534/usr/lib/snapd/snap-confine
+
+```
