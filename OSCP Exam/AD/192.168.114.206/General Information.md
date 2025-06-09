@@ -12,107 +12,25 @@ Password: BusyOfficeWorker890
 ### quick scan
 
 ```
-# Nmap 7.95 scan initiated Sun Jun  8 22:23:38 2025 as: /usr/lib/nmap/nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/kali/OSCP/Exam/AD/192.168.114.206/results/192.168.114.206/scans/_quick_tcp_nmap.txt -oX /home/kali/OSCP/Exam/AD/192.168.114.206/results/192.168.114.206/scans/xml/_quick_tcp_nmap.xml 192.168.114.206
-Nmap scan report for 192.168.114.206
-Host is up, received user-set (0.51s latency).
-Scanned at 2025-06-08 22:23:39 EDT for 438s
-Not shown: 995 filtered tcp ports (no-response)
-PORT     STATE SERVICE            REASON          VERSION
-135/tcp  open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
-139/tcp  open  netbios-ssn        syn-ack ttl 127 Microsoft Windows netbios-ssn
-445/tcp  open  microsoft-ds?      syn-ack ttl 127
-3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 127
-| ssl-cert: Subject: commonName=WS26.oscp.exam
-| Issuer: commonName=WS26.oscp.exam
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2024-11-11T12:50:39
-| Not valid after:  2025-05-13T12:50:39
-| MD5:   1c2c:0a0a:c19e:4426:8a74:4515:3fca:64ae
-| SHA-1: cadb:9cca:0d17:b710:631b:6e7a:ebb0:d93b:5b1f:d37b
-| -----BEGIN CERTIFICATE-----
-| MIIC4DCCAcigAwIBAgIQJdnEr7blr7xOMCAjcMSC7zANBgkqhkiG9w0BAQsFADAZ
-| MRcwFQYDVQQDEw5XUzI2Lm9zY3AuZXhhbTAeFw0yNDExMTExMjUwMzlaFw0yNTA1
-| MTMxMjUwMzlaMBkxFzAVBgNVBAMTDldTMjYub3NjcC5leGFtMIIBIjANBgkqhkiG
-| 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmdIbgyZ4SLJZF9YVs4dAFyQcWFOhWR5Ph738
-| XQrWNhjCFCVLS0OQ4947Vq/C8XyW7Ru9PER4+/tuFL6FXbemF6iVviy2kuapC4ZX
-| Rf49maAoyA80v4AxsXS76Ju19ZgJXtWhzJsBni2wPuP0WPQdqJ5WYzqZGikkdi1c
-| p5wyFDw5Tk24mpgpDz3/L7WCe4qywUGNvKV7GhH/twcex+LhDiG1RMiZBxncSqAA
-| jc9ZtDoO/bBmuF/c2aKNJWE/bI01gQHezOHmSYuCrsbe1IDKSeI5XHBnFwUM1ETT
-| JOl4F0Z8z4FWwpNgyP/vdi/CwNEXEx3ntJ7YtC9f9YJD/JqHIQIDAQABoyQwIjAT
-| BgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQAD
-| ggEBAGCDGtCm9fI3BqvlzdlYsqUUz0ET8ImA9xKtJpkgL+ACswzewyGDwHa9b4RD
-| iU9N7hPnhIwFq9LsMENvGEzQXPfV8kVk6oASwW8vO5zK6qYTin0exu9pyNqma1uY
-| a933O+OfhLsv2+ksUfgZ69hv5NExxVtRgY6toDY/OkvWEiU2u0E4rwjdHknuNj3b
-| 46cqLVPChgoAN6pBdObWS7kdbXeViklsPd5yaC2JJH48DHA2NXpKuH5aJgmwROs/
-| yFxPxbx2d9xYcjJLpbuNyv5akeyjfMijr1pksHASN3k7tNTnswzlJjrd82vZVY5j
-| 6aUtAEe1VGnMsXSQzkyxqpO/Dgw=
-|_-----END CERTIFICATE-----
-|_ssl-date: TLS randomness does not represent time
-| rdp-ntlm-info: 
-|   Target_Name: OSCP
-|   NetBIOS_Domain_Name: OSCP
-|   NetBIOS_Computer_Name: WS26
-|   DNS_Domain_Name: oscp.exam
-|   DNS_Computer_Name: WS26.oscp.exam
-|   DNS_Tree_Name: oscp.exam
-|   Product_Version: 10.0.22621
-|_  System_Time: 2024-11-12T13:09:53+00:00
-5985/tcp open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-server-header: Microsoft-HTTPAPI/2.0
-|_http-title: Not Found
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
-Device type: general purpose
-Running (JUST GUESSING): Microsoft Windows 11|2008|7|2016 (89%)
-OS CPE: cpe:/o:microsoft:windows_11 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2016
-OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
-Aggressive OS guesses: Microsoft Windows 11 21H2 (89%), Microsoft Windows 7 or Windows Server 2008 R2 (85%), Microsoft Windows Server 2016 (85%)
-No exact OS matches for host (test conditions non-ideal).
-TCP/IP fingerprint:
-SCAN(V=7.95%E=4%D=6/8%OT=135%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=68464761%P=x86_64-pc-linux-gnu)
-SEQ(SP=108%GCD=1%ISR=10B%TI=I%II=I%SS=S%TS=A)
-SEQ(SP=FD%GCD=1%ISR=10F%TI=I%II=I%SS=S%TS=A)
-OPS(O1=M551NW8ST11%O2=M551NW8ST11%O3=M551NW8NNT11%O4=M551NW8ST11%O5=M551NW8ST11%O6=M551ST11)
-WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFDC)
-ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M551NW8NNS%CC=N%Q=)
-T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
-T2(R=N)
-T3(R=N)
-T4(R=N)
-U1(R=N)
-IE(R=Y%DFI=N%TG=80%CD=Z)
+ packets sent: 4 (152B) | Rcvd: 1 (40B)
 
-Uptime guess: 0.025 days (since Sun Jun  8 21:54:17 2025)
-Network Distance: 2 hops
-TCP Sequence Prediction: Difficulty=253 (Good luck!)
-IP ID Sequence Generation: Incremental
+┌──(kali㉿kali)-[~/OSCP/Exam/AD/172.16.114.200]
+└─$ nmap -sV 172.16.114.202            
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-09 04:35 EDT
+Nmap scan report for 172.16.114.202
+Host is up (0.095s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000
+5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
-Host script results:
-|_clock-skew: mean: -208d13h20m23s, deviation: 0s, median: -208d13h20m23s
-| smb2-security-mode: 
-|   3:1:1: 
-|_    Message signing enabled but not required
-| smb2-time: 
-|   date: 2024-11-12T13:09:55
-|_  start_date: N/A
-| p2p-conficker: 
-|   Checking for Conficker.C or higher...
-|   Check 1 (port 16744/tcp): CLEAN (Timeout)
-|   Check 2 (port 49411/tcp): CLEAN (Timeout)
-|   Check 3 (port 31065/udp): CLEAN (Timeout)
-|   Check 4 (port 51316/udp): CLEAN (Timeout)
-|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 87.88 seconds
 
-TRACEROUTE (using port 3389/tcp)
-HOP RTT       ADDRESS
-1   ...
-2   679.51 ms 192.168.114.206
-
-Read data files from: /usr/share/nmap
-OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Jun  8 22:30:57 2025 -- 1 IP address (1 host up) scanned in 438.96 seconds
 
 ```
 ### full scan 
