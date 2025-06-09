@@ -2273,6 +2273,37 @@ No saved Wifi credentials found
 
 
 ```
+ÉÍÍÍÍÍÍÍÍÍÍ¹ Network Ifaces and known hosts
+È The masks are only for the IPv4 addresses 
+    Ethernet0[00:50:56:8A:0C:56]: 192.168.114.206 / 255.255.255.0
+        Gateways: 192.168.114.254
+        Known hosts:
+          192.168.114.111       00-50-56-8A-B1-AC     Dynamic
+          192.168.114.254       00-50-56-8A-C5-9B     Dynamic
+          192.168.114.255       FF-FF-FF-FF-FF-FF     Static
+          224.0.0.22            01-00-5E-00-00-16     Static
+          224.0.0.251           01-00-5E-00-00-FB     Static
+
+    Ethernet1[00:50:56:8A:CA:91]: 172.16.114.206 / 255.255.255.0
+        DNSs: 172.16.114.200
+        Known hosts:
+          172.16.114.200        00-50-56-8A-3A-3A     Dynamic
+          172.16.114.255        FF-FF-FF-FF-FF-FF     Static
+          224.0.0.22            01-00-5E-00-00-16     Static
+          224.0.0.251           01-00-5E-00-00-FB     Static
+          224.0.0.252           01-00-5E-00-00-FC     Static
+          239.255.255.250       01-00-5E-7F-FF-FA     Static
+
+    Loopback Pseudo-Interface 1[]: 127.0.0.1, ::1 / 255.0.0.0
+        DNSs: fec0:0:0:ffff::1%1, fec0:0:0:ffff::2%1, fec0:0:0:ffff::3%1
+        Known hosts:
+          224.0.0.22            00-00-00-00-00-00     Static
+          239.255.255.250       00-00-00-00-00-00     Static
+
+
+```
+
+```
     RegPath: HKCU\Software\Microsoft\Windows\CurrentVersion\Run
     RegPerms: r.andrews [FullControl]
     Key: OneDriveSetup
@@ -2282,3 +2313,72 @@ No saved Wifi credentials found
 ```
 
 this looks worth looking into 
+
+```
+*Evil-WinRM* PS C:\Tasks> ls
+
+
+    Directory: C:\Tasks
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         10/9/2024   5:08 PM           3616 automation
+
+
+*Evil-WinRM* PS C:\Tasks> cat automation
+<?xml version="1.0" encoding="UTF-16"?>
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Date>2024-10-09T17:08:15</Date>
+    <Author>WS26\Administrator</Author>
+    <URI>\Automation</URI>
+  </RegistrationInfo>
+  <Triggers>
+    <TimeTrigger>
+      <Repetition>
+        <Interval>PT1M</Interval>
+        <StopAtDurationEnd>false</StopAtDurationEnd>
+      </Repetition>
+      <StartBoundary>2024-10-09T17:08:00</StartBoundary>
+      <Enabled>true</Enabled>
+    </TimeTrigger>
+  </Triggers>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>true</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>false</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>
+    <IdleSettings>
+      <Duration>PT10M</Duration>
+      <WaitTimeout>PT1H</WaitTimeout>
+      <StopOnIdleEnd>true</StopOnIdleEnd>
+      <RestartOnIdle>false</RestartOnIdle>
+    </IdleSettings>
+    <AllowStartOnDemand>true</AllowStartOnDemand>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>C:\Windows\System32\cmd.exe</Command>
+      <Arguments>/c C:\Windows\Logs\task.bat</Arguments>
+    </Exec>
+  </Actions>
+  <Principals>
+    <Principal id="Author">
+      <UserId>Administrator</UserId>
+      <LogonType>Password</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+</Task>
+*Evil-WinRM* PS C:\Tasks> 
+
+```
