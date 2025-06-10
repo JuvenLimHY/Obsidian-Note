@@ -103,3 +103,4 @@ Documentation Requirements:
 - Provide the link or the copy of the script/exploits being used
 - Document any changes done to the original scripts or exploits being used
 - Provide a summary and overview of the vulnerabilities found, performed attacks and exploitation process
+![[{CF5A0876-4854-4506-81F2-8400EC5516A6} 1.png]]
